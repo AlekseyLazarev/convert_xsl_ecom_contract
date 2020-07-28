@@ -1,0 +1,7 @@
+*.class
+*.html
+*.js
+*.css
+logs/*
+tmp
+target/
