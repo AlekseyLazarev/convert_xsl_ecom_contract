@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>converter</groupId>
-	<artifactId>ecomXslToJson</artifactId>
+	<artifactId>convert_xls_ecom_contract</artifactId>
 	<version>v1</version>
 	<packaging>war</packaging>
-	<name>ecomXslToJson</name>
-	<description>Конвертация excel файлов в json</description>
+	<name>convert_xls_ecom_contract</name>
+	<description>Конвертация excel файлов ЕКОМ договор в json</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -77,6 +77,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>convert_xls_ecom_contract</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -89,8 +90,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>9</source>
-                    <target>9</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>

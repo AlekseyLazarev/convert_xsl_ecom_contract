@@ -62,4 +62,13 @@ public class TaskStatus {
         this.bar.incValue();
     }
 
+    /**
+     * Добавление пути к файлу.
+     *
+     * @param filePath путь к файлу.
+     */
+    public void addFilePath(String filePath) {
+        this.files.add(filePath);
+    }
+
 }

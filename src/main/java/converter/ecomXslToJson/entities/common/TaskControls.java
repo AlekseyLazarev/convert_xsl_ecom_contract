@@ -16,16 +16,4 @@ import java.util.Map;
 public class TaskControls {
     private List<Controls> controls = new ArrayList<>();
     private Map<String, Object> values = new LinkedHashMap<>();
-
-    /**
-     * Метод записывает лист элементов управления, создаёт для них поля в карте значений.
-     *
-     * @param controls лист элементов управления.
-     */
-    public void setControls(List<Controls> controls) {
-        this.controls = controls;
-        for (Controls current: controls) {
-            this.values.put(current.getN(), null);
-        }
-    }
 }

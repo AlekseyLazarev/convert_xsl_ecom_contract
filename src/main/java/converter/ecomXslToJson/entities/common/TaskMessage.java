@@ -9,9 +9,9 @@ import java.util.Date;
  */
 @Getter
 public class TaskMessage {
-    private TaskMessageType type;
-    private String msg;
-    private long time;
+    private final TaskMessageType type;
+    private final String msg;
+    private final long time;
 
     /**
      * Конструктор сообщения задачи, время проставляется автоматически.

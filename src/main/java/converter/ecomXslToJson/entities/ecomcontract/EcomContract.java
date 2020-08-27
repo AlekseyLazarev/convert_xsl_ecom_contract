@@ -116,8 +116,8 @@ public class EcomContract {
                 append(JSON_DIVIDER).append(getFormattedCodeRegion()).
                 append(JSON_DIVIDER).append(getFormattedInn()).
                 append(JSON_DIVIDER).append(getFormattedContractNumber());
-        result.append(startString).append("|").
-                append(calc.toString()).append(NEW_LINE);
+        result.append(startString).append(JSON_COMMAND_DIVIDER).
+                append(calc.toString()).append(JSON_COMMAND_DIVIDER).append(NEW_LINE);
         for (EcomContractInner inner : ecomContractInnerList) {
             result.append(startString).append(JSON_DIVIDER).
                     append(inner.toJsonString()).append(NEW_LINE);
