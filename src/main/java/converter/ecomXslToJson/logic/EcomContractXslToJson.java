@@ -195,7 +195,6 @@ public class EcomContractXslToJson {
             recInfo(sid, "Начало получения контрактов . . .");
             for (int i = 2; rows.hasNext(); i++) {
                 Row row = rows.next();
-                System.out.println(i);
                 LocalDateTime startDate = getDateValueFromCell(row.getCell(columnNames.get(DATE_START)));
                 LocalDateTime endDate = getDateValueFromCell(row.getCell(columnNames.get(DATE_END)));
                 String sign = row.getCell(columnNames.get(SIGN)).getStringCellValue();
@@ -283,7 +282,6 @@ public class EcomContractXslToJson {
      * @return LocalDateTime из ячейки.
      */
     private LocalDateTime getDateValueFromCell(Cell cell) {
-        CellType cur = cell.getCellType();
-        return CellType.NUMERIC.equals(cell.getCellType()) ? cell.getLocalDateTimeCellValue() : null;
+        return cell == null || cell.getCellType() != CellType.NUMERIC ? null : cell.getLocalDateTimeCellValue();
     }
 }
